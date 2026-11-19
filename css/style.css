@@ -1,0 +1,146 @@
+:root {
+  --primary: #fff2d2;
+  --background: #43403c;
+  --secondary: #301900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background);
+  color: #fff;
+}
+
+/* logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .logo :hover {
+  transform: scale(1.1);
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  max-width: 60px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3%;
+  background: linear-gradient(to right, #774e22, #ad7f57, #ebc18d);
+  border-bottom: 1px solid #343434e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #301900;
+  font-family: Moon Dance;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1, 4rem;
+  margin: 0.8rem;
+  align-items: center;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--secondary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scalex(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-ekstra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-ekstra :hover {
+  color: var(--secondary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* media queries*/
+
+/* laptop */
+
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .logo img {
+    width: 50px;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .logo img {
+    width: 40px;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+  }
+}
+
+/* mobile phone */
+@media screen and (max-width: 450px) {
+  html {
+    font: size 55%;
+  }
+  .logo img {
+    width: 30px;
+  }
+}
