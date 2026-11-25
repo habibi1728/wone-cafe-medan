@@ -1,4 +1,4 @@
-// toggle class active //rnav
+// toggle class active //
 const navbar = document.querySelector(".navbar-nav");
 
 // ketika hamburger menu diklik
